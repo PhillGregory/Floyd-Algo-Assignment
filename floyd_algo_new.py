@@ -41,13 +41,13 @@ def sol(dist):
     if i < V:
         i+=1
         if(dist[i][j] == INF):
-            print("INF", end=" ")
+            print("%7s" % ("INF"), end=" ")
     elif j < V:
         j+=1
         if(dist[i][j] == INF):
-            print("INF", end=" ")
+            print("%7s" % ("INF"), end=" ")
     else:
-        print(dist[i][j], end=' ')
+        print("%7d\t" % (dist[i][j]), end=' ')
     print(" ")
 
 # Use below function to call shortest distance matrix
