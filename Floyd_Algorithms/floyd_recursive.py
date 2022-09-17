@@ -7,7 +7,10 @@ INF = 9999
 
 # This algorithm will find the shortest route between each vertice in the below matrix
 print("Initial graph is below: ")
-graph = [[0, 7, INF, 8], [INF, 0, 5, INF], [INF, INF, 0, 2], [INF, INF, INF, 0]]
+graph = [[0, 7, INF, 8], 
+[INF, 0, 5, INF], 
+[INF, INF, 0, 2], 
+[INF, INF, INF, 0]]
 
 # V represents the number of vertices in the graph
 V = len(graph[0])
