@@ -28,3 +28,10 @@ def floyd_iter(distance):
 # Use below function to call shortest distance matrix
 print("Below is the output graph which displays the shortest route between each vertice:")
 floyd_iter(graph)
+
+# Performance test
+
+import timeit
+import time
+print("Time in seconds taken to run floyd function is shown below: ")
+print(timeit.timeit(stmt='floyd_iter(graph)', setup='' ,number=1, globals=globals()))
