@@ -1,7 +1,7 @@
 import unittest
-import Floyd_Algorithms.floyd_iterative_pdf
-import Floyd_Algorithms.floyd_iterative_geek
-import Floyd_Algorithms.floyd_recursive
+from Floyd_Algorithms.floyd_iterative_pdf import floyd_iter
+from Floyd_Algorithms.floyd_iterative_geek import floydWarshall
+from Floyd_Algorithms.floyd_recursive import floyd, sol
 
 
 #The test needs to prove that both the recursive and iterative functions both return a known expected result from a given input
@@ -11,20 +11,20 @@ expected_output = [[0, 7, 12, 8], [INF, 0, 5, 7], [INF, INF, 0, 2], [INF, INF, I
 
 
 class TestAlgo(unittest.TestCase):
-    graph = [[0, 7, INF, 8], [INF, 0, 5, INF], [INF, INF, 0, 2], [INF, INF, INF, 0]]
+    input_graph = [[0, 7, INF, 8], [INF, 0, 5, INF], [INF, INF, 0, 2], [INF, INF, INF, 0]]
 
     expected_output = [[0, 7, 12, 8], [INF, 0, 5, 7], [INF, INF, 0, 2], [INF, INF, INF, 0]]
 
     def test_iterative_pdf_algo(self):
-        result = Floyd_Algorithms.floyd_iterative_pdf.floyd_iter(self.graph)
+        result = floyd_iter(self.input_graph)
         self.assertEqual(self.input_graph, result)
 
     def test_iterative_geek_algo(self):
-        result = Floyd_Algorithms.floyd_iterative_geek.floydWarshall(self.graph)
-        self.assertEqual(self.graph, result)
+        result = floydWarshall(self.input_graph)
+        self.assertEqual(self.input_graph, result)
 
     #def test_recursive_algo(self):
-        #result = Floyd_Algorithms.floyd_recursive.sol(self,(0,0,0))
+        #result = floyd(self,k,i,j)
         #self.assertEqual(self.graph, result)
         
 

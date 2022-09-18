@@ -46,9 +46,20 @@ if __name__ == "__main__":
 
     floydWarshall(graph)
 
-# Performance test
+# Performance test using timeit
 
 import timeit
 import time
 print("Time in seconds taken to run floyd function is shown below: ")
 print(timeit.timeit(stmt='floydWarshall(graph)', setup='' ,number=1, globals=globals()))
+
+# Performance test using Cprofile
+import cProfile
+def main():
+    dist = list(map(lambda i: list(map(lambda j: j, i)), graph))
+    floydWarshall(graph)
+    printSolution(dist)
+    
+if __name__ == '__main__':
+    cProfile.run('main()')
+    

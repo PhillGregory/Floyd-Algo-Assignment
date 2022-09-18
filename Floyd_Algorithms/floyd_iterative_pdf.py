@@ -15,7 +15,7 @@ print("Initial graph is below: ")
 print(graph)
 
 def floyd_iter(distance): 
-# Assume that if start_node and end_node are the same # then the distance would be zero
+# Assume that if start_node and end_node are the same then the distance would be zero
   for k,i,j in itertools.product(range(MAX_LENGTH),range(MAX_LENGTH), range(MAX_LENGTH)):
     if i == j:
       distance[i][j] = 0 
@@ -35,3 +35,11 @@ import timeit
 import time
 print("Time in seconds taken to run floyd function is shown below: ")
 print(timeit.timeit(stmt='floyd_iter(graph)', setup='' ,number=1, globals=globals()))
+
+# Performance test using Cprofile
+import cProfile
+def main():
+    floyd_iter(graph)
+    
+if __name__ == '__main__':
+    cProfile.run('main()')
