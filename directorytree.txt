@@ -5,10 +5,15 @@ Floyd-Algo-Assignment
 |   |_floyd_iterative_pdf.py
 |   |_floyd_recursive.py
 |
+|__Tests
+|  |_perf_test_iter.py
+|  |_perf_test_rec.py
+|  |_unit_test_iter.py
+|  |_unit_test_rec.py
+|
 |_directorytree.txt
 |
 |_README.md
 |
 |_requirements.txt
-|
-|_test_algos.py
+

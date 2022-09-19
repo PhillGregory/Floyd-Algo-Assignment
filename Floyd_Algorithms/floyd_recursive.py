@@ -57,19 +57,3 @@ def sol(dist):
 print("Below is the output graph which displays the shortest route between each vertice:")
 floyd(0,0,0)
 print(dist)
-
-# Performance test
-
-import timeit
-import time
-print("Time in seconds taken to run floyd function is shown below: ")
-print(timeit.timeit(stmt='floyd(0,0,0)', setup='' ,number=1, globals=globals()))
-
-# Performance test using Cprofile
-import cProfile
-def main():
-    floyd(0,0,0)
-    sol(dist)
-    
-if __name__ == '__main__':
-    cProfile.run('main()')

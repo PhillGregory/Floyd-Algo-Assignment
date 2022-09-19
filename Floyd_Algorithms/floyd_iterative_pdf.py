@@ -4,15 +4,18 @@ import itertools
 # If there is no path between two nodes, the graph states INF
 INF = 9999
 
+# This algorithm will find the shortest route between each vertice in the below matrix
+print("Initial graph is below: ")
 graph = [[0, 7, INF, 8], 
 [INF, 0, 5, INF], 
 [INF, INF, 0, 2], 
 [INF, INF, INF, 0]]
 
-MAX_LENGTH = len(graph[0])
-# This algorithm will find the shortest route between each vertice in the below matrix
-print("Initial graph is below: ")
 print(graph)
+
+# MAX_LENGTH is set to the number of vertices in the graph as below
+MAX_LENGTH = len(graph[0])
+
 
 def floyd_iter(distance): 
 # Assume that if start_node and end_node are the same then the distance would be zero
@@ -28,18 +31,3 @@ def floyd_iter(distance):
 # Use below function to call shortest distance matrix
 print("Below is the output graph which displays the shortest route between each vertice:")
 floyd_iter(graph)
-
-# Performance test
-
-import timeit
-import time
-print("Time in seconds taken to run floyd function is shown below: ")
-print(timeit.timeit(stmt='floyd_iter(graph)', setup='' ,number=1, globals=globals()))
-
-# Performance test using Cprofile
-import cProfile
-def main():
-    floyd_iter(graph)
-    
-if __name__ == '__main__':
-    cProfile.run('main()')
