@@ -1,7 +1,7 @@
 #A simple implementation of Floyd's algorithm
 import itertools
 
-# If there is no path between two nodes, the graph states INF
+# If there is no path between two nodes, the graph states INF. INF is defined below a large integer.
 INF = 9999
 
 # This algorithm will find the shortest route between each vertice in the below matrix

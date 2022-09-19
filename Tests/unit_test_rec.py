@@ -23,14 +23,25 @@ expected_output3 = [[0, 7, 10, 8, 4], [INF, 0, 5, 7, 3], [INF, INF, 0, 2, 6], [I
 # Each test represents a different graph input
 class TestRec(unittest.TestCase):
     def test_floyd_rec1(self):
-        self.assertEqual(floyd(input_graph1), expected_output1)
+        dist = list(map(lambda i: list(map(lambda j: j, i)), input_graph1))
+        floyd(0,0,0)
+        sol(dist)
+        self.assertEqual(floyd(0,0,0), expected_output1)
         
     def test_floyd_rec2(self):
-        self.assertEqual(floyd(input_graph2), expected_output2)
+        dist = list(map(lambda i: list(map(lambda j: j, i)), input_graph2))
+        floyd(0,0,0)
+        sol(dist)       
+        self.assertEqual(floyd(0,0,0), expected_output2)
         
     def test_floyd_rec3(self):
-        self.assertEqual(floyd(input_graph3), expected_output3)
+        dist = list(map(lambda i: list(map(lambda j: j, i)), input_graph3))
+        floyd(0,0,0)
+        sol(dist)
+        self.assertEqual(floyd(0,0,0), expected_output3)
 
 # The below code is used to run this test script
 if __name__ == '__main__':
     unittest.main()
+    
+# Tests are failing due to an error in the testing code. Working to resolve these errors.

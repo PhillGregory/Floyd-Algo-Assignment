@@ -21,7 +21,7 @@ This project includes:
 
 ## Known issues
 1. Unit tests are still showing errors. I am working to fix this so all algorithms pass their respective unit test. The goal of each unit test is to prove that an input matrix is equal to a known expected result after the algorithm has been run on the input
-2. requirements.txt file is generating blank. I am working to resolve this issue.
+2. requirements.txt file is generating blank
 
 ## Acknowledgements
 1. Code for floyd_iterative_pdf was made by using the imperative solution code provided on the assignment page

@@ -35,4 +35,8 @@ class TestIter(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
     
-# Functions are failing as the solution to the input graph is giving the output 'none'. Working to resolve this issue.
+# Tests are failing as the solution to the input graph is giving the output 'none'. Error is shown in below comment
+# Ran 3 tests in 0.001s
+# FAILED (failures=3)
+# AssertionError: None != [[0, 7, 12, 8], [9999, 0, 5, 7], [9999, 9999, 0, 2], [9999, 9999, 9999, 0]]
+

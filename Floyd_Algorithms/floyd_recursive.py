@@ -1,22 +1,25 @@
 # Python Recursive version of Floyd Marshall Algorithm
 
-# If there is no path between two nodes, the graph states INF
+# If there is no path between two nodes, the graph states INF. INF is defined below as a large integer.
 INF = 9999
 
 # If the start node is the same as the end node, the distance is 0
 
 # This algorithm will find the shortest route between each vertice in the below matrix
 print("Initial graph is below: ")
+
 graph = [[0, 7, INF, 8], 
 [INF, 0, 5, INF], 
 [INF, INF, 0, 2], 
 [INF, INF, INF, 0]]
 
+print(graph)
+
 # V represents the number of vertices in the graph
 V = len(graph[0])
 
+# Define dist variable as below (similarly to the dist function in floyd_iterative_geek.py)
 dist = list(map(lambda i: list(map(lambda j: j, i)), graph))
-print(dist)
 
 # Algorithm
 def floyd(k,i,j):

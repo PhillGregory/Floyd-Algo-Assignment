@@ -1,14 +1,15 @@
 # Python3 Program for Floyd Warshall Algorithm
- # Number of vertices in the graph
-V = 4
+# This version of the algorithm is from https://www.geeksforgeeks.org/floyd-warshall-algorithm-dp-16/
  
-# Define infinity as the large
-# enough value. This value will be
-# used for vertices not connected to each other
+# Define infinity as the large enough value. This value will be used for vertices not connected to each other
 INF = 99999
  
-# Solves all pair shortest path
-# via Floyd Warshall Algorithm
+# Solves all pair shortest path via Floyd Warshall Algorithm
+
+graph = [[0, 7, INF, 8], [INF, 0, 5, INF], [INF, INF, 0, 2], [INF, INF, INF, 0]]
+
+# Number of vertices in the graph
+V = len(graph[0])
 
 def floydWarshall(graph):
     dist = list(map(lambda i: list(map(lambda j: j, i)), graph))
@@ -17,8 +18,7 @@ def floydWarshall(graph):
         # pick all vertices as source one by one
         for i in range(V):
  
-            # Pick all vertices as destination for the
-            # above picked source
+            # Pick all vertices as destination for the above picked source
             for j in range(V):
  
                 # If vertex k is on the shortest path from
@@ -40,26 +40,5 @@ def printSolution(dist):
             if j == V-1:
                 print()
 
-# Driver's code
-if __name__ == "__main__":
-    graph = [[0, 7, INF, 8], [INF, 0, 5, INF], [INF, INF, 0, 2], [INF, INF, INF, 0]]
-
-    floydWarshall(graph)
-
-# Performance test using timeit
-
-import timeit
-import time
-print("Time in seconds taken to run floyd function is shown below: ")
-print(timeit.timeit(stmt='floydWarshall(graph)', setup='' ,number=1, globals=globals()))
-
-# Performance test using Cprofile
-import cProfile
-def main():
-    dist = list(map(lambda i: list(map(lambda j: j, i)), graph))
-    floydWarshall(graph)
-    printSolution(dist)
-    
-if __name__ == '__main__':
-    cProfile.run('main()')
+floydWarshall(graph)
     
