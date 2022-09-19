@@ -16,7 +16,7 @@ This project includes:
 ## Installation and usage instructions
 1. Clone this project using my repository link https://github.com/PhillipGregory/Floyd-Algo-Assignment.git
 2. Check and install any requirements on the requirements.txt
-3. Open the code for the desired algorithm in the FLoyd_Algorithms code
+3. Open the code for the desired algorithm in the Floyd_Algorithms code
 4. Run the code directly on your chosen IDE
 
 ## Known issues
